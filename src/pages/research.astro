@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const pubs = [
+  {
+    year: "2024",
+    title: "Accelerating Large Language Model Inference with WebGPU-Optimized Bidirectional Encoder Representation Architecture",
+    venue: "IEEE Transactions on Emerging Topics in Computational Intelligence (submitted, under review)",
+    links: [
+      { label: "PDF (add)", href: "#" },
+      { label: "Code (add)", href: "#" }
+    ]
+  },
+  {
+    year: "2024",
+    title: "GraphDPR: A Privacy Policy Analysis Framework Using Knowledge Graphs and Topic Modeling",
+    venue: "In preparation",
+    links: [
+      { label: "Preprint (add)", href: "#" },
+      { label: "Code (add)", href: "#" }
+    ]
+  },
+  {
+    year: "2020",
+    title: "Research on String Matching Edit Distance Algorithm and Jaro-Winkler Distance",
+    venue: "Springer (DOI: 10.1007/978-981-15-2317-5_25)",
+    links: [
+      { label: "Publisher", href: "https://doi.org/10.1007/978-981-15-2317-5_25" }
+    ]
+  }
+];
+---
+<BaseLayout title="Research — Md Istiak Morsalin">
+  <h1 class="mt-8 text-3xl font-semibold tracking-tight text-brand-900">Research</h1>
+  <p class="mt-3 text-slate-700 max-w-3xl">
+    My work focuses on efficient ML systems (including browser/WebGPU inference), applied NLP, privacy policy analysis,
+    and simulation-driven optimization.
+  </p>
+
+  <Section title="Publications">
+    <div class="mt-2 space-y-4">
+      {pubs.map((p) => (
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <div class="text-xs font-semibold text-brand-800">{p.year}</div>
+              <h3 class="mt-1 font-semibold text-slate-900">{p.title}</h3>
+              <p class="mt-2 text-sm text-slate-700">{p.venue}</p>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
+            {p.links.map((l) => (
+              <a class="text-sm font-semibold text-brand-800 hover:text-brand-700" href={l.href} target={l.href.startsWith('http') ? "_blank" : undefined} rel={l.href.startsWith('http') ? "noreferrer" : undefined}>
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </Section>
+
+  <Section title="Research Interests">
+    <ul class="list-disc pl-5 text-slate-700 space-y-1">
+      <li>Efficient inference and optimization (WebGPU / browser ML)</li>
+      <li>Applied NLP (clinical text, event extraction, classification)</li>
+      <li>Privacy policy analysis (knowledge graphs, topic modeling)</li>
+      <li>Simulation and digital twins for logistics and operations</li>
+      <li>Healthcare systems & ML deployment</li>
+    </ul>
+  </Section>
+</BaseLayout>

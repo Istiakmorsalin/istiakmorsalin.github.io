@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+---
+<BaseLayout title="Consulting — Md Istiak Morsalin">
+  <h1 class="mt-8 text-3xl font-semibold tracking-tight text-brand-900">Consulting</h1>
+  <p class="mt-3 text-slate-700 max-w-3xl">
+    I help teams ship production-grade mobile and AI systems quickly, with clean architecture and measurable performance.
+  </p>
+
+  <Section title="How I can help">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h3 class="font-semibold text-slate-900">Mobile + Web</h3>
+        <p class="mt-2 text-sm text-slate-700">Flutter apps, iOS/Android, UI engineering, performance, and testing.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h3 class="font-semibold text-slate-900">Backend + APIs</h3>
+        <p class="mt-2 text-sm text-slate-700">Django / Spring Boot services, REST/GraphQL APIs, microservices.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h3 class="font-semibold text-slate-900">ML Deployment</h3>
+        <p class="mt-2 text-sm text-slate-700">Model packaging, latency/cost benchmarking, quantization, autoscaling.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h3 class="font-semibold text-slate-900">Simulation & Analytics</h3>
+        <p class="mt-2 text-sm text-slate-700">AnyLogic simulations, throughput/cycle time analysis, experimentation.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Get in touch">
+    <p class="text-slate-700">
+      Email: <a class="font-semibold text-brand-800 hover:text-brand-700" href="mailto:anik.cse@gmail.com">anik.cse@gmail.com</a>
+    </p>
+  </Section>
+</BaseLayout>

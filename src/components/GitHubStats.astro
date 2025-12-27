@@ -1,0 +1,25 @@
+---
+const user = "Istiakmorsalin";
+---
+
+<div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+  <h3 class="font-semibold text-brand-900 mb-4">Open Source Activity</h3>
+
+  <img
+    src={`https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&theme=default&hide_border=true`}
+    class="w-full rounded-xl mb-4"
+    loading="lazy"
+  />
+
+  <img
+    src={`https://github-readme-streak-stats.herokuapp.com?user=${user}&hide_border=true`}
+    class="w-full rounded-xl mb-4"
+    loading="lazy"
+  />
+
+  <img
+    src={`https://github-readme-activity-graph.vercel.app/graph?username=${user}&hide_border=true`}
+    class="w-full rounded-xl"
+    loading="lazy"
+  />
+</div>
